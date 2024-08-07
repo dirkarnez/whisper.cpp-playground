@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.18)
 
 project("whisper.cpp-playground")
-
+set (CMAKE_CXX_STANDARD 11)
 set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads)
 
@@ -16,8 +16,6 @@ endif()
 add_executable(${PROJECT_NAME}
     "src/main.cpp"
 )
-
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_11)
 
 # common common-sdl whisper
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
