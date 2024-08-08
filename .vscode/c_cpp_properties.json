@@ -4,14 +4,15 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${env:USERPROFILE}\\Downloads\\portaudio-v19.7.0-mingw64-x86_64-posix-seh-rev0-8.1.0\\include\\**"
+                "${env:USERPROFILE}\\Downloads\\whisper.cpp\\cmake-build\\cmakeInstallationPath\\include\\**",
+                "${env:USERPROFILE}\\Downloads\\SDL\\cmake-build\\cmakeInstallationPath\\include\\**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "${env:USERPROFILE}\\Downloads\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "D:\\Softwares\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1\\mingw64\\bin\\gcc.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "windows-gcc-x64"
