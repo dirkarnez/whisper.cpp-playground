@@ -6,6 +6,7 @@ whisper.cpp-playground
 - [ ] Raspberry 4 baremetal
 - [ ] Build variant
 - [ ] Cantonese models
+
 ### Using
 - [dirkarnez/whisper.cpp-prebuilt](https://github.com/dirkarnez/whisper.cpp-prebuilt)
 

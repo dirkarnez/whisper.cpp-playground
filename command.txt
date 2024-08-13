@@ -1,4 +1,0 @@
-.\stream.exe --capture 2 -m whisper-small-yue-hk.bin  --keep-context --language yue
-step = 3.0 sec / len = 10.0 sec / keep = 0.2 sec
-
---length 3000

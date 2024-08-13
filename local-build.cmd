@@ -20,7 +20,7 @@ echo %PATH%
 cmake.exe -G"MinGW Makefiles" ^
 -DCMAKE_BUILD_TYPE=Debug ^
 -DCMAKE_EXE_LINKER_FLAGS="-static" ^
--Dwhisper_DIR="%DOWNLOADS_DIR_LINUX%/whisper.cpp/cmake-build/cmakeInstallationPath/lib/cmake/whisper" ^
+-Dwhisper_ROOT="%DOWNLOADS_DIR_LINUX%/whisper.cpp/cmake-build/cmakeInstallationPath" ^
 -DSDL2_DIR="%DOWNLOADS_DIR_LINUX%/SDL/cmake-build/cmakeInstallationPath/lib/cmake/SDL2" ^
 -B./cmake-build &&^
 cd cmake-build && ( cmake --build . && echo "Successful build" )  &&^
