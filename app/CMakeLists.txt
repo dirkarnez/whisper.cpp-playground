@@ -28,6 +28,15 @@ else()
     message(STATUS "NO")
 endif()
 
+
+find_package(SDL2_image 2.8.2 EXACT REQUIRED) # PATHS "P:\\Downloads\\cpp-libraries\\portaudio\\build\\cmake\\portaudio")
+
+if(SDL2_image_FOUND)
+    message(STATUS "SDL2_image_FOUND")
+else()
+    message(STATUS "NO")
+endif()
+
 add_executable(${PROJECT_NAME}
     "src/main.cpp"
 )
@@ -38,5 +47,5 @@ target_compile_features(${PROJECT_NAME}
 )
 
 
-target_link_libraries(${PROJECT_NAME} PRIVATE common gpt-2 whisper SDL2::SDL2-static audio)
+target_link_libraries(${PROJECT_NAME} PRIVATE common gpt-2 whisper SDL2::SDL2-static SDL2_image::SDL2_image-static audio)
 target_link_options(${PROJECT_NAME} PRIVATE "-static")
