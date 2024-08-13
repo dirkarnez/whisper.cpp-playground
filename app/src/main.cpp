@@ -1,56 +1,10 @@
-// Real-time speech recognition of input from a microphone
+// Talk with AI
 //
-// A very quick-n-dirty implementation serving mainly as a proof of concept.
-//
+
+// #include "common-sdl.h"
+// #include "common.h"
 #include "whisper.h"
-#define SDL_MAIN_HANDLED 
-#define _USE_MATH_DEFINES // for M_PI
-
-#include <cassert>
-#include <cstdio>
-#include <string>
-#include <thread>
-#include <vector>
-#include <fstream>
-
-
-#include "SDL2/SDL.h"
-#include "SDL2/SDL_audio.h"
-
-#include <atomic>
-#include <cstdint>
-#include <vector>
-#include <mutex>
-
-#include <string>
-#include <map>
-#include <vector>
-#include <random>
-#include <thread>
-#include <ctime>
-#include <fstream>
-
-#define COMMON_SAMPLE_RATE 16000s
-
-
-bool sdl_poll_events() {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        switch (event.type) {
-            case SDL_QUIT:
-                {
-                    return false;
-                }
-            default:
-                break;
-        }
-    }
-
-    return true;
-}
-
-#include "whisper.h"
-
+#include "gpt-2/gpt-2.h"
 
 #include <cassert>
 #include <cstdio>
