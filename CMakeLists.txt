@@ -4,10 +4,13 @@ set (CMAKE_CXX_STANDARD 11)
 
 project("whisper.cpp-playground")
 
-add_subdirectory("app")
-# add_subdirectory("common")
+add_subdirectory("common")
+add_subdirectory("ggml-helper")
 add_subdirectory("gpt-2")
+add_subdirectory("audio")
+add_subdirectory("app")
 # add_subdirectory("gui")
+
 
 # set (THREADS_PREFER_PTHREAD_FLAG ON)
 # find_package(Threads)

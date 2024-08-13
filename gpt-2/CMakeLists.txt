@@ -29,7 +29,7 @@ target_compile_features(${PROJECT_NAME}
 )
 
 # SDL2::SDL2-statics
-target_link_libraries(${PROJECT_NAME} PRIVATE whisper)
+target_link_libraries(${PROJECT_NAME} PRIVATE whisper common ggml-helper)
 
     
 target_include_directories(${PROJECT_NAME}

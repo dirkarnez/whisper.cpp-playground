@@ -4,6 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/ggml-helper/**",
                 "${env:USERPROFILE}\\Downloads\\whisper.cpp\\cmake-build\\cmakeInstallationPath\\include\\**",
                 "${env:USERPROFILE}\\Downloads\\SDL\\cmake-build\\cmakeInstallationPath\\include\\**"
             ],

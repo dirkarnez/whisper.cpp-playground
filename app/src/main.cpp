@@ -1,10 +1,10 @@
 // Talk with AI
 //
-
-// #include "common-sdl.h"
-// #include "common.h"
+#define SDL_MAIN_HANDLED 
+#include "common-sdl.h"
+#include "common.h"
 #include "whisper.h"
-#include "gpt-2/gpt-2.h"
+#include "gpt-2.h"
 
 #include <cassert>
 #include <cstdio>
