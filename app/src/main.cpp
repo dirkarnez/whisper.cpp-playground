@@ -1,3 +1,5 @@
+#define SDL_MAIN_HANDLED 
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <vector>
@@ -8,7 +10,7 @@ int main(int argc, char* argv[]) {
     IMG_Init(IMG_INIT_PNG);
 
     // Create a transparent window
-    SDL_Window* window = SDL_CreateWindow("Clippy Animation", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 300, 400, SDL_WINDOW_TRANSPARENT);
+    SDL_Window* window = SDL_CreateWindow("Clippy Animation", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 300, 400, SDL_ALPHA_TRANSPARENT);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     // Load the Clippy image sequence

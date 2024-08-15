@@ -29,6 +29,49 @@ else()
 endif()
 
 
+
+
+
+find_package(ZLIB REQUIRED)
+if(ZLIB_FOUND)
+    message(STATUS "ZLIB_FOUND")
+else()
+    message(STATUS "NO")
+endif()
+
+
+
+
+
+
+add_library(png_static STATIC IMPORTED)
+
+set_target_properties(png_static PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${libpng16_ROOT}/include/libpng16"
+    INTERFACE_LINK_LIBRARIES "ZLIB::ZLIB"
+    INTERFACE_SYSTEM_INCLUDE_DIRECTORIES "include/libpng16"
+)
+
+set_property(TARGET png_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+
+set_target_properties(png_static PROPERTIES
+    IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
+    IMPORTED_LOCATION_RELEASE "${libpng16_ROOT}/lib/libpng16.a"
+)
+
+add_library(PNG::PNG ALIAS png_static)
+            
+
+
+
+
+
+
+
+
+
+
+
 find_package(SDL2_image 2.8.2 EXACT REQUIRED) # PATHS "P:\\Downloads\\cpp-libraries\\portaudio\\build\\cmake\\portaudio")
 
 if(SDL2_image_FOUND)
